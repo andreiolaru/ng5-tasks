@@ -8,12 +8,8 @@ using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Tasks.Web
+namespace TestMakerFree
 {
-    using System.IO;
-
-    using Microsoft.Extensions.FileProviders;
-
     public class Startup
     {
         public Startup(IConfiguration configuration)
@@ -37,8 +33,7 @@ namespace Tasks.Web
                 app.UseDeveloperExceptionPage();
                 app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions
                 {
-                    HotModuleReplacement = true,
-                    //HotModuleReplacementEndpoint = "/dist/__webpack_hmr"
+                    HotModuleReplacement = true
                 });
             }
             else
@@ -47,18 +42,18 @@ namespace Tasks.Web
             }
 
             app.UseStaticFiles(new StaticFileOptions()
-                                   {
-                                       OnPrepareResponse = (context) =>
-                                           {
-                                               // Disable caching for all static files. 
-                                               context.Context.Response.Headers["Cache-Control"] =
-                                                   Configuration["StaticFiles:Headers:Cache-Control"];
-                                               context.Context.Response.Headers["Pragma"] =
-                                                   Configuration["StaticFiles:Headers:Pragma"];
-                                               context.Context.Response.Headers["Expires"] =
-                                                   Configuration["StaticFiles:Headers:Expires"];
-                                           }
-                                   });
+            {
+                OnPrepareResponse = (context) =>
+                {
+                    // Disable caching for all static files. 
+                    context.Context.Response.Headers["Cache-Control"] =
+                        Configuration["StaticFiles:Headers:Cache-Control"];
+                    context.Context.Response.Headers["Pragma"] =
+                        Configuration["StaticFiles:Headers:Pragma"];
+                    context.Context.Response.Headers["Expires"] =
+                        Configuration["StaticFiles:Headers:Expires"];
+                }
+            });
 
             app.UseMvc(routes =>
             {

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tasks.Web", "Tasks.Web\Tasks.Web.csproj", "{CDD9255F-147A-4C04-849B-F1E2A212A35E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tasks.Web.UI", "Tasks.Web.UI\Tasks.Web.UI.csproj", "{E1E05A88-9C68-4EC3-96D9-92093424B78E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CDD9255F-147A-4C04-849B-F1E2A212A35E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CDD9255F-147A-4C04-849B-F1E2A212A35E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CDD9255F-147A-4C04-849B-F1E2A212A35E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CDD9255F-147A-4C04-849B-F1E2A212A35E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1E05A88-9C68-4EC3-96D9-92093424B78E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1E05A88-9C68-4EC3-96D9-92093424B78E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1E05A88-9C68-4EC3-96D9-92093424B78E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1E05A88-9C68-4EC3-96D9-92093424B78E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
